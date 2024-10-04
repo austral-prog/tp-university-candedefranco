@@ -10,7 +10,7 @@ public class AgregarEstudiantesTest {
     @Test
     public void pruebaAgregarEstudiantesPorCurso() {
         LectorCSV lector = new LectorCSV();
-        List<Estudiante> estudiantes = lector.leerEstudiantes("src/main/resources/input.csv");
+        List<Estudiante> estudiantes = lector.leerEstudiantes("src/main/resources/students.csv");
 
         AgregadorEstudiantes agregador = new AgregadorEstudiantes();
         Map<String, Integer> conteoEstudiantes = agregador.agregarEstudiantesPorCurso(estudiantes);

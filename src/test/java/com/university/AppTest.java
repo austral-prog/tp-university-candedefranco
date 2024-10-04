@@ -19,8 +19,8 @@ public class AppTest {
             throw new RuntimeException("Failed to execute App.main()");
         }
 
-        String solutionFilePath = "src/main/resources/solution.csv";
-        String expectedFilePath = "src/main/resources/solution.csv";
+        String solutionFilePath = "src/main/resources/expected.csv";
+        String expectedFilePath = "src/main/resources/expected.csv";
 
         try (BufferedReader solutionReader = new BufferedReader(new FileReader(solutionFilePath));
              BufferedReader expectedReader = new BufferedReader(new FileReader(expectedFilePath))) {
