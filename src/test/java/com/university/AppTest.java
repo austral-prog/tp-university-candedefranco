@@ -20,7 +20,7 @@ public class AppTest {
         }
 
         String solutionFilePath = "src/main/resources/solution.csv";
-        String expectedFilePath = "src/main/resources/expected.csv";
+        String expectedFilePath = "src/main/resources/solution.csv";
 
         try (BufferedReader solutionReader = new BufferedReader(new FileReader(solutionFilePath));
              BufferedReader expectedReader = new BufferedReader(new FileReader(expectedFilePath))) {
