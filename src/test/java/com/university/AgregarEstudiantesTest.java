@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import java.util.List;
 import java.util.Map;
 
-public class AgregadorEstudiantesTest {
+public class AgregarEstudiantesTest {
 
     @Test
     public void pruebaAgregarEstudiantesPorCurso() {
