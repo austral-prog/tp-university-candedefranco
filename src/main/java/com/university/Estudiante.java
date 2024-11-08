@@ -2,19 +2,19 @@ package com.university;
 
 public class Estudiante {
     private String nombre;
-    private String curso;
+    private String cursos;
 
-    public Estudiante(String nombre, String curso) {
+    public Estudiante(String nombre, String cursos) {
         this.nombre = nombre;
-        this.curso = curso;
+        this.cursos = cursos;
     }
 
     public String getNombre() {
         return nombre;
     }
 
-    public String getCurso() {
-        return curso;
+    public String getCursos() {
+        return cursos;
     }
 }
 

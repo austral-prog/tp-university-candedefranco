@@ -1,19 +1,24 @@
 package com.university;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class AgregadorEstudiantes {
 
     public Map<String, Integer> agregarEstudiantesPorCurso(List<Estudiante> estudiantes) {
-        Map<String, Integer> conteoCursos = new HashMap<>();
+        Map<String, Set<String>> conteoCursosEstudiantes = new HashMap<>();
 
         for (Estudiante estudiante : estudiantes) {
             String nombre = estudiante.getNombre();
-            conteoCursos.put(nombre, conteoCursos.getOrDefault(nombre, 0) + 1);
+            String curso= estudiante.getCursos();
+            conteoCursosEstudiantes.putIfAbsent(nombre, new HashSet<>());
+            conteoCursosEstudiantes.get(nombre).add(curso);
         }
 
-        return conteoCursos;
+        Map<String, Integer> contarCursos = new HashMap<>();
+        for (Map.Entry<String, Set<String>> entry : conteoCursosEstudiantes.entrySet()) {
+            contarCursos.put(entry.getKey(), entry.getValue().size());
+        }
+
+        return contarCursos;
     }
 }
